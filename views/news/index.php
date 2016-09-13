@@ -5,16 +5,14 @@
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Effloresce  by FCT</title>
-<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-<link href="/template/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
 	<div id="menu-wrapper">
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#">Homepage</a></li>
-				<li><a href="#">news</a></li>
-				<li><a href="#">product</a></li>
+				<li><a href="http://mvc2/login">Log in</a></li>
+				<li><a href="http://mvc2/registration">registration</a></li>
+				<li><a href="http://mvc2/product">product</a></li>
 
 			</ul>
 		</div>
@@ -24,7 +22,7 @@
 	<div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1><a href="#">Moto is my life</a></h1>
+				<h1><a href="#">Moto blog</a></h1>
 				<p>Тест mvc от Макса</p>
 			</div>
 		</div>
@@ -36,12 +34,10 @@
 				<div id="content">
 					<?php foreach ($newsList as $newsItem):?>
 					<div class="post">
-						<h2 class="title"><a href='/news/<?php echo $newsItem['id'] ;?>'><?php echo $newsItem['title'].' # '.$newsItem['id'];?></a></h2>
-						</a> on <?php echo $newsItem['short_content'];?>
-							&nbsp;&bull;&nbsp; <a href='/news/<?php echo $newsItem['id'] ;?>' class="permalink"> Full article</a></p>
+						<h2 class="title"><a href='/news/<?php echo $newsItem['id'] ;?>'>
+								<?php echo ' # '.$newsItem['id'].' '.$newsItem['title'];?></a></h2>
 						<div class="entry">
 							<p><img src="/template/images/pic01.jpg" width="700" height="500" alt="" /></p>
-							<p><?php echo $newsItem['short_content'];?></p>
 						</div>
 					</div>
 				<?php endforeach;?>
@@ -67,17 +63,6 @@
 								<li><a href="#">Aliquam libero</a></li>
 							</ul>
 						</li>
-						<li>
-							<h2>Archives</h2>
-							<ul>
-								<li><a href="#">Aliquam libero</a></li>
-								<li><a href="#">Consectetuer adipiscing elit</a></li>
-								<li><a href="#">Metus aliquam pellentesque</a></li>
-								<li><a href="#">Suspendisse iaculis mauris</a></li>
-								<li><a href="#">Urnanet non molestie semper</a></li>
-								<li><a href="#">Proin gravida orci porttitor</a></li>
-							</ul>
-						</li>
 					</ul>
 				</div>
 				<!-- end #sidebar -->
@@ -87,9 +72,10 @@
 	</div>
 	<!-- end #page -->
 </div>
+
+
 <div id="footer">
 	<p>Copyright (c) 2016  All rights reserved. </p>
 </div>
-<!-- end #footer -->
 </body>
 </html>
